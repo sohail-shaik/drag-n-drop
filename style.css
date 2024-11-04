@@ -1,0 +1,186 @@
+/* General styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
+    background-color: #1a1a1d;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.header {
+    font-size: 32px;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.instructions {
+    font-size: 16px;
+    color: #d3d3d3;
+    margin-bottom: 20px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.highlight {
+    color: #ff4500;
+    font-weight: bold;
+}
+
+/* Container for drag-and-drop */
+#dhtmlgoodies_dragDropContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px; /* Increased gap for better spacing */
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Movies column styling */
+#dhtmlgoodies_listOfItems {
+    width: 240px;
+}
+
+#dhtmlgoodies_listOfItems p {
+    margin: 0;
+    font-size: 18px;
+    background-color: #444;
+    color: #ffcc00;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#dhtmlgoodies_listOfItems ul {
+    height: 500px; /* Adjusted height for better fit */
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #555;
+    background-color: #2b2b2b;
+    border-radius: 4px;
+    list-style-type: none; /* Remove bullet points */
+}
+
+#dhtmlgoodies_listOfItems li {
+    list-style-type: none; /* Ensure bullet points are removed */
+    background-color: #4d4d4d;
+    border: 1px solid #777;
+    padding: 10px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #f0f0f0;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    display: block; /* Ensure each item remains a block element */
+}
+
+#dhtmlgoodies_listOfItems li:hover {
+    background-color: #ffcc00;
+    color: #333;
+}
+
+/* Directors' boxes container styling */
+#dhtmlgoodies_mainContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 720px; /* Adjusted for better spacing */
+    width: 100%;
+}
+
+/* Individual director boxes styling */
+.director-box {
+    border: 1px solid #777;
+    background-color: #2b2b2b;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.director-box p {
+    margin: 0;
+    font-size: 18px;
+    padding: 10px;
+    background-color: #444;
+    color: #ffcc00;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.director-box ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 10px 0 0;
+    height: 100px;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 4px;
+}
+
+/* Correct and wrong answer styling */
+.correctAnswer, .wrongAnswer {
+    display: block !important; /* Ensure items remain visible */
+    list-style-type: none !important; /* Remove bullet points */
+    padding: 8px;
+    margin: 4px 0;
+    border-radius: 4px;
+}
+
+.correctAnswer {
+    background-color: #28a745 !important; /* Green for correct answer */
+    color: #FFF !important;
+    border: none;
+}
+
+.wrongAnswer {
+    background-color: #dc3545 !important; /* Red for wrong answer */
+    color: #FFF !important;
+    border: none;
+}
+
+/* Drag content styling */
+#dragContent {
+    position: absolute;
+    z-index: 2000;
+}
+
+#dragDropIndicator {
+    position: absolute;
+    z-index: 1000;
+    width: 7px;
+    height: 10px;
+    display: none;
+}
+
+/* Hover effect for director boxes when item is being dragged */
+.director-box .mouseover {
+    background-color: #444 !important;
+}
